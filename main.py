@@ -48,7 +48,7 @@ def get_projects_by_email(email: str):
 
 @app.get("/")
 def read_root():
-    return {"message": "API running"}
+    return {"message": "API is running with no issues"}
 
 @app.get("/projects/{email}")
 def get_projects(email: str):
