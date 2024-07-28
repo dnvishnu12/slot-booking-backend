@@ -5,3 +5,4 @@ venv/
 
 # Exclude environment configuration files
 .env
+.vercel

@@ -17,7 +17,7 @@ encoded_username = quote_plus(username)
 encoded_password = quote_plus(password)
 
 # MongoDB connection
-client = MongoClient(f"mongodb+srv://{encoded_username}:{encoded_password}@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient(f"mongodb+srv://{encoded_username}:{encoded_password}@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&tls=true")
 
 db = client["roadmap_builder"]
 roadmaps_collection = db["roadmaps"]
