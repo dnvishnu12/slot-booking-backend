@@ -22,6 +22,10 @@ booking_collection = db["booking_list"]
 
 app = FastAPI()
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
