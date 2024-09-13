@@ -9,12 +9,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-username = os.getenv("MONGO_USERNAME")
-password = os.getenv("MONGO_PASSWORD")
-encoded_username = quote_plus(username)
-encoded_password = quote_plus(password)
+# username = os.getenv("MONGO_USERNAME")
+# password = os.getenv("MONGO_PASSWORD")
+# encoded_username = quote_plus(username)
+# encoded_password = quote_plus(password)
 
-client = MongoClient(f"mongodb+srv://{encoded_username}:{encoded_password}@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&tls=true")
+client = MongoClient(f"mongodb+srv://dnvishnu:Fu99NSbZqN8wN4ks@cluster0.yeodlfo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["slotbook"]
 
 class_collection = db["class_list"]
